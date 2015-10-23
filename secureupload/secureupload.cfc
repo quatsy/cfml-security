@@ -15,6 +15,10 @@
 
 		<cfset var result = {success=false, validExtension=false, validType=false, cfFileResult="", fileName="", filePath="", mimeType="", message="", ext=""}>
 		<cfset var tempNameConflict = "makeunique">
+		
+		<!--- handle extension lists with spaces between list items --->
+		<cfset arguments.extensions = Replace(arguments.extensions," ","","ALL") />
+		
 		<cftry>
 			<cfset validateFilePath(arguments.tempDirectory)>
 			<cfset validateFilePath(arguments.destination)>

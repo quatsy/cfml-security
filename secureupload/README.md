@@ -42,7 +42,7 @@ The full file path including the directory and full file name.
 
 ##### fileName
 
-The file name including the extension.
+The result file name including the extension. Provides convenient access to CFFILERESULT.SERVERFILENAME.
 
 ##### ext
 
